@@ -1,7 +1,8 @@
 document.getElementById('id_logic').innerHTML = "Logic: 2019.12.02.1";
 
 window.addEventListener("touchstart", touch_start_uab);
-window.addEventListener("toucmove", touch_move_uab);
+window.addEventListener("touchmove", touch_move_uab);
+window.addEventListener("touchend", touch_end_uab);
 
 var canvas = document.getElementById("id_canvas");
 var context = canvas.getContext("2d");
@@ -44,7 +45,7 @@ function touch_start_uab(p)
 
 function touch_move_uab(p)
 {
-	var t = p.changeTouches;
+	var t = p.changedTouches;
 	for (var i = 0; i < t.length; i++)
 	{
 		var index_t = -1;
@@ -62,5 +63,20 @@ function touch_move_uab(p)
 			context.lineWidth = 20;
 			context.fill();
 			context.stroke();
+	}
+}
+
+function touch_end_uab(p)
+{
+	var t = p.changedTouches; //lista degetelor care se ridica
+	for (var i = 0; i < t.length; i++)
+	{
+		var index_t = -1;
+		for (var j = 0; j < last_position.length; j++)
+			if (last_position[j].id == t[i].identifier){
+				index_t = j;
+				break;
+			}
+			last_position.splice(index_t, 1);
 	}
 }
