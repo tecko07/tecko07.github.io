@@ -1,4 +1,4 @@
-doument.getElementById("id_logic").innerHTML= "Logic: 2019.12.02.0";
+doument.getElementById('id_logic').innerHTML= "Logic: 2019.12.02.0";
 
 window.addEventListener("touchstart", touch_start_uab);
 
