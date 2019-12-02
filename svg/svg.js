@@ -9,9 +9,6 @@ function deseneaza(unghi_x, unghi_y) {
 	var circle = document.getElementById("id_circle");
 	var svg = document.getElementById("id_svg");
 
-	//construim o cale
-	context.beginPath();
-
 	var r = circle.getAttribute("r");
 	//adaugam un cerc la cale
 	var x = unghi_x / 90 * (svg.width.animVal.value / 2 - r) + svg.width.animVal.value / 2; 
