@@ -14,8 +14,8 @@ function deseneaza(unghi_x, unghi_y) {
 
 	var r = circle.getAttribute("r");
 	//adaugam un cerc la cale
-	var x = unghi_x / 90 * (svg.width / 2 - r) + svg.width / 2; 
-	var y = unghi_y / 90 * (svg.height / 2 - r) + svg.height / 2; 
+	var x = unghi_x / 90 * (svg.width.animVal.value / 2 - r) + svg.width.animVal.value / 2; 
+	var y = unghi_y / 90 * (svg.height.animVal.value / 2 - r) + svg.height.animVal.value / 2; 
 	
 	//actualizam pozitia cercului
 	circle.setAttribute("cx", x);
