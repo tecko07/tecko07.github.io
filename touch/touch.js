@@ -15,6 +15,6 @@ function touch_start_uab(p)
 		context.arc(t[i].pageX, t[i].pageY, 10, 0, 2 * Math.PI);
 		context.stroke();
 
-		
+
 	}
 }
