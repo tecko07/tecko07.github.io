@@ -5,6 +5,7 @@ window.addEventListener("touchstart", touch_start_uab);
 var canvas = document.getElementById("id_canvas");
 var context = canvas.getContext("2d");
 
+var last_position = [];
 function touch_start_uab(p)
 {
 	var t = p.changeTouches;
